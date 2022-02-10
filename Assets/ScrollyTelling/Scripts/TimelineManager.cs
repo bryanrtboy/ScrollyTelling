@@ -14,9 +14,10 @@ public class TimelineManager : MonoBehaviour
 
     public void setTime(Vector2 value)
     {
-
+        //Invert slider value
+        float t = Mathf.Lerp(1, 0, value.y);
         double maxtime = m_playable.duration;
-        double actTime = value.y * maxtime;
+        double actTime = t * maxtime;
         if (m_playable.state == PlayState.Paused)
         {
             // this will call RebuildGraph if needed
