@@ -5,4 +5,4 @@
  
  The project uses a [Timeline](https://docs.unity3d.com/Packages/com.unity.timeline@1.7/manual/index.html) and a vertical scrollview as a playhead to scrub through the Timeline. The Playable Director component on the camera has Play On Awake set to false, and Wrapmode set to Hold. A script is attached to the scrollview to advance the timeline from beginning to end. Using a scrollview works well because it has an inertia setting and can easily move forward and back along the Timeline.
  
- The Timeline itself has a Cinemachine track to move between cameras, an animation track and a few different events as an example of how this might be used.
+ The Timeline itself has a [Cinemachine](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.9/manual/index.html) track to move between cameras, an animation track and a few different events as an example of how this might be used.
