@@ -14,8 +14,9 @@ public class TimelineManager : MonoBehaviour
 
     public void setTime(Vector2 value)
     {
-        //Invert slider value
-        float t = Mathf.Lerp(1, 0, value.y);
+        //Invert slider value and make it slightly less than 1 to prevent jittering at the end of the track
+        float t = Mathf.Lerp(.99f, 0, value.y);
+
         double maxtime = m_playable.duration;
         double actTime = t * maxtime;
         if (m_playable.state == PlayState.Paused)
